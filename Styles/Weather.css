@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Weather-Card {
+    background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+    border-radius: 20px;
+    padding: 20px;
+    width: 500px;
+    height: fit-content;
+    margin: 55px auto 0px;
+    text-align: center;
+    box-shadow: 10px 10px 20px rgba(18, 14, 14, 0.96);
+    color: #ffffff;
+
+}
+
+.search-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    width: 100%;
+}
+
+.search-box input{
+    background: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 5px 15px;
+    width: 85%;
+    border: solid #ad1414 3px;
+}
+
+.img-1{
+    width: 30%;
+    margin-top: 30px;
+}
+
+.details{
+    width: 30%;
+}
+
+hr{
+        border: none;
+        border-radius: 50px;
+        height: 5px; 
+        background-color: #88ff00; 
+    }
+
+    input::placeholder {
+        color: #fd0101; 
+        font-style: italic; 
+    }
+
+    
