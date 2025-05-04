@@ -36,16 +36,14 @@ document.addEventListener("DOMContentLoaded", function () {
   async function validateCity(city) {
     // Fetch city data from OpenWeatherMap API
     try {
-      // fetch the city data from OpenWeatherMap API
+      // Use HTTPS instead of HTTP for the API call
       const response = await fetch(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`
       );
       const data = await response.json(); // Parse the response as JSON
 
-      if (
-        data.length > 0 && // Check if the data array is not empty
-        data[0].name.toLowerCase() === city.toLowerCase() // Check if the city name matches the input (case-insensitive)
-      ) {
+      // Simplified validation - just check if we got any results back
+      if (data.length > 0) {
         return data[0].name; // Return the valid city name
       } else {
         // If the city name is invalid
